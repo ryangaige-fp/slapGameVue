@@ -118,11 +118,15 @@
   }
 
   .yellow {
-    content: url(../assets/health75.png)
+    content: url(../assets/health25.jpg);
+    animation-name: fade;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.75s;
+    animation-direction: alternate
   }
 
   .red {
-    content: url(../assets/health0.jpg);
+    content: url(../assets/health0.png);
     animation-name: fade;
     animation-timing-function: ease-in-out;
     animation-duration: 1s;
