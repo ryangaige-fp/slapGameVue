@@ -1,6 +1,6 @@
 <template>
   <div class="fightclub">
-    <img :src="status()" height="300" width="300">
+    <img :class="status()" src="" height="300" width="300">
     <h2>The first rule of Fight Club is: You do not talk about Fight Club</h2>
     <h3><span class="textWeight">YOU</span> decide your own level of involvement!</h3>
     <h1>{{target.name}}</h1>
@@ -32,15 +32,15 @@
     methods: {
 
       status() {
-        let imageSrc = "../assets/363519925.png"
+        let classSrc = "green"
         if (this.target.health == 0) {
-          imageSrc = "../assets/363519925.png"
+          classSrc = "red"
         } else if (this.target.health <= 45) {
-          imageSrc = "../assets/363519925.png"
+          classSrc = "yellow"
         } else if (this.target.health <= 75) {
-          imageSrc = "../assets/363519925.png"
+          classSrc = "orange"
         }
-        return imageSrc
+        return classSrc
 
       },
 
@@ -68,6 +68,69 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .green {
+    content: url(../assets/363519925.png)
+  }
+
+  .orange {
+    content: url(../assets/health75.png);
+    animation-name: fade;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.75s;
+    animation-direction: alternate
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: .10
+    }
+    25% {
+      opacity: .25;
+    }
+    35% {
+      opacity: .35;
+    }
+    45% {
+      opacity: .45;
+    }
+    55% {
+      opacity: .55;
+    }
+    65% {
+      opacity: .65;
+    }
+    75% {
+      opacity: .75;
+    }
+    85% {
+      opacity: .85;
+    }
+    95% {
+      opacity: .95;
+    }
+    100% {
+      opacity: 1;
+    }
+
+  }
+
+  .yellow {
+    content: url(../assets/health75.png)
+  }
+
+  .red {
+    content: url(../assets/health0.jpg);
+    animation-name: fade;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-direction: alternate
+  }
+
+
+
   .textWeight {
     font-weight: bold;
     text-decoration: underline;
