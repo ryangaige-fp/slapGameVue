@@ -72,6 +72,7 @@
     content: url(../assets/363519925.png)
   }
 
+
   .orange {
     content: url(../assets/health75.png);
     animation-name: fade;
@@ -118,7 +119,7 @@
   }
 
   .yellow {
-    content: url(../assets/health25.jpg);
+    content: url(../assets/health25.png);
     animation-name: fade;
     animation-timing-function: ease-in-out;
     animation-duration: 1.75s;
